@@ -18,12 +18,12 @@ resource "flux_bootstrap_git" "this" {
     private_key = var.private_key
   }
 }
-
+```
 ## Inputs
-github_repository - (Required) The name of the Git repository to be created.
-target_path - (Optional) The path to clone the Git repository into. Default value is clusters.
-private_key - (Required) The SSH private key to use for Git operations.
-config_path - (Optional) The path to the Kubernetes configuration file. Default value is ~/.kube/config.
+- github_repository - (Required) The name of the Git repository to be created.
+- target_path - (Optional) The path to clone the Git repository into. Default value is clusters.
+- private_key - (Required) The SSH private key to use for Git operations.
+- config_path - (Optional) The path to the Kubernetes configuration file. Default value is ~/.kube/config.
 
 ## Outputs
 None.
