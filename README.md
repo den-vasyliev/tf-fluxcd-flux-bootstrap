@@ -14,6 +14,7 @@ resource "flux_bootstrap_git" "this" {
   path = var.target_path
   ssh = {
     username    = "git"
+    ## Use tls module https://github.com/den-vasyliev/tf-hashicorp-tls-keys
     private_key = var.private_key
   }
 }
