@@ -1,4 +1,4 @@
-# Terraform Flux Bootstrap Git Provider
+# Terraform Flux Bootstrap Git Module
 
 This Terraform module creates a Git repository to be used as a source for Flux Bootstrap.
 
