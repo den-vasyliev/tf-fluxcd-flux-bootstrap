@@ -18,6 +18,7 @@ module "flux_bootstrap" {
 - target_path - (Optional) The path to clone the Git repository into. Default value is clusters.
 - private_key - (Required) The SSH private key to use for Git operations.
 - config_path - (Optional) The path to the Kubernetes configuration file. Default value is ~/.kube/config.
+- github_token -(Required) The GitHub token ised by fluxcd/flux provider
 
 ## Outputs
 None.
