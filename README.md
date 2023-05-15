@@ -5,18 +5,14 @@ This Terraform module creates a Git repository to be used as a source for Flux B
 ## Usage
 
 ```hcl
-provider "flux" {
-  config_path = var.config_path
+module "flux_bootstrap" {
+  source            = "github.com/den-vasyliev/tf-fluxcd-flux-bootstrap"
+  github_repository = "${var.GITHUB_OWNER}/${var.FLUX_GITHUB_REPO}"
+  private_key       = module.tls_private_key.private_key_pem
+  config_path = module.gke_cluster.kubeconfig
 }
-
-resource "flux_bootstrap_git" "this" {
-  url  = "ssh://git@github.com/${var.github_repository}.git"
-  path = var.target_path
-  ssh = {
-    username    = "git"
-    ## Use tls module https://github.com/den-vasyliev/tf-hashicorp-tls-keys
-    private_key = var.private_key
-  }
+module "tls_private_key" {
+  source = "github.com/den-vasyliev/tf-hashicorp-tls-keys"
 }
 ```
 ## Inputs
