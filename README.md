@@ -11,9 +11,6 @@ module "flux_bootstrap" {
   private_key       = module.tls_private_key.private_key_pem
   config_path = module.gke_cluster.kubeconfig
 }
-module "tls_private_key" {
-  source = "github.com/den-vasyliev/tf-hashicorp-tls-keys"
-}
 ```
 ## Inputs
 - github_repository - (Required) The name of the Git repository to be created.
