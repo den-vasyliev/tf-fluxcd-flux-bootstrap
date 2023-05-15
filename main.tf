@@ -1,13 +1,13 @@
 provider "flux" {
-      kubernetes = {
-  config_path = var.config_path
+  kubernetes = {
+    config_path = var.config_path
   }
   git = {
-     url  = "ssh://git@github.com/${var.github_repository}.git"
-  ssh = {
-    username    = "git"
-    private_key = var.private_key
-  }
+    url = "https://github.com/${var.github_repository}.git"
+    http = {
+      username = "git"
+      password = var.GITHUB_TOKEN
+    }
   }
 }
 
