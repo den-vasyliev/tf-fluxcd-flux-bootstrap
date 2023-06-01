@@ -3,6 +3,12 @@ variable "github_repository" {
   description = "GitHub repository to store Flux manifests"
 }
 
+variable "flux_namespace" {
+  type        = string
+  default     = "flux-system"
+  description = "GitHub repository to store Flux manifests"
+}
+
 variable "target_path" {
   type        = string
   default     = "clusters"
