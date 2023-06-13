@@ -29,17 +29,24 @@ variable "private_key" {
 variable "config_host" {
   type        = string
   default     = "gke"
-  description = "The url for gke"
+  description = "The url for kind"
 }
 
-variable "config_token" {
+variable "config_client_key" {
   type        = string
-  default     = "token"
-  description = "The token for gke"
+  default     = "client_key"
+  description = "The token for kind"
 }
+
+variable "config_crt" {
+  type        = string
+  default     = "ca"
+  description = "The ca for kind"
+}
+
 
 variable "config_ca" {
   type        = string
   default     = "ca"
-  description = "The ca for gke"
+  description = "The ca for kind"
 }
