@@ -6,7 +6,7 @@ This Terraform module creates a Git repository to be used as a source for Flux B
 
 ```hcl
 module "flux_bootstrap" {
-  source            = "github.com/den-vasyliev/tf-fluxcd-flux-bootstrap?ref=kind_auth
+  source            = "github.com/den-vasyliev/tf-fluxcd-flux-bootstrap?ref=kind_auth"
   github_repository = "${var.GITHUB_OWNER}/${var.FLUX_GITHUB_REPO}"
   private_key       = module.tls_private_key.private_key_pem
   config_host       = module.kind_cluster.endpoint
@@ -14,7 +14,6 @@ module "flux_bootstrap" {
   config_ca         = module.kind_cluster.ca
   config_crt        = module.kind_cluster.crt
   github_token      = var.GITHUB_TOKEN
-}
 }
 ```
 ## Inputs
