@@ -23,6 +23,7 @@ variable "github_token" {
 
 variable "private_key" {
   type        = string
+  default = ""
   description = "The private key used to authenticate with the Git repository"
 }
 
