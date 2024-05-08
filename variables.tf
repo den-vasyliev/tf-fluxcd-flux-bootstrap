@@ -35,11 +35,6 @@ variable "private_key" {
   type        = string
   default     = ""
   description = "The private key used to authenticate with the Git repository"
-
-  validation {
-    condition     = length(var.private_key) > 0
-    error_message = "The private_key must not be empty."
-  }
 }
 
 variable "config_host" {
@@ -50,7 +45,6 @@ variable "config_host" {
 
 variable "config_token" {
   type        = string
-  default     = "token"
   description = "The token for gke"
 
   validation {
@@ -67,4 +61,4 @@ variable "config_ca" {
     condition     = length(var.config_ca) > 0
     error_message = "The config_ca must not be empty."
   }
- }
+}
