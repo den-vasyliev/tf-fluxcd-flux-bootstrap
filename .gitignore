@@ -1,0 +1,17 @@
+# Terraform state
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Sensitive files
+*.env
+*.secret
+
+# Editor/OS files
+*.swp
+*.swo
+*.bak
+.DS_Store
+.idea/
+.vscode/
