@@ -15,7 +15,6 @@ module "flux_bootstrap" {
   config_crt        = module.kind_cluster.crt
   github_token      = var.GITHUB_TOKEN
 }
-}
 ```
 ## Inputs
 - github_repository - (Required) The name of the Git repository to be created.
